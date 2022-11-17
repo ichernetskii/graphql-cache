@@ -1,0 +1,86 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"standard-with-typescript"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"rules": {
+		"quotes": [
+			"error",
+			"double"
+		],
+		"indent": [
+			"error",
+			"tab"
+		],
+		"no-tabs": [
+			"error",
+			{
+				"allowIndentationTabs": true
+			}
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"comma-dangle": [
+			"error",
+			"always-multiline"
+		],
+		"@typescript-eslint/quotes": [
+			"error",
+			"double"
+		],
+		"@typescript-eslint/indent": ["off"],
+		"@typescript-eslint/semi": [
+			"error",
+			"always"
+		],
+		"@typescript-eslint/member-delimiter-style": [
+			"error",
+			{
+				"multiline": {
+					"delimiter": "semi",
+					"requireLast": true
+				},
+				"singleline": {
+					"delimiter": "semi",
+					"requireLast": true
+				}
+			}
+		],
+		"@typescript-eslint/comma-dangle": [
+			"error",
+			"always-multiline"
+		],
+		"@typescript-eslint/strict-boolean-expressions": [
+			"error",
+			{
+				"allowNullableObject": true,
+				"allowNullableString": true
+			}
+		],
+		"@typescript-eslint/restrict-template-expressions": [
+			"error",
+			{
+				"allowAny": true
+			}
+		],
+		"@typescript-eslint/no-floating-promises": [
+			"error",
+			{
+				"ignoreIIFE": true,
+				"ignoreVoid": true
+			}
+		],
+		"@typescript-eslint/space-before-function-paren": ["error", "never"]
+	}
+}

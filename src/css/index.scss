@@ -1,0 +1,76 @@
+$accent-color: #719ECE;
+$border-color: #000;
+
+body {
+	padding: 2rem 1rem;
+	margin: 0;
+}
+
+main {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	font-family: "Roboto", sans-serif;
+}
+
+.input {
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+
+	&__filter {
+		width: 40%;
+		font-family: "Roboto Mono", monospace;
+		font-size: 1em;
+		flex-grow: 0;
+		transition: all 300ms ease-in;
+		margin-left: 0.5rem;
+		padding: 0 0.35em;
+		border: 1px solid #CCC;
+		border-radius: 0.35rem;
+
+		&:focus {
+			flex-grow: 1;
+			border-color: $accent-color;
+			outline: none;
+			box-shadow: 0 0 5px $accent-color;
+		}
+	}
+}
+
+.response { margin-top: 1rem; }
+
+.table {
+	display: grid;
+	grid-template-columns: 5rem auto;
+
+	& > :nth-child(1) { border-top-left-radius: 0.5rem; }
+	& > :nth-child(2) { border-top-right-radius: 0.5rem; }
+	& > :nth-last-child(1) { border-bottom-right-radius: 0.5rem; }
+	& > :nth-last-child(2) { border-bottom-left-radius: 0.5rem; }
+
+	&__header {
+		background-color: #999;
+		color: #FFF;
+		font-weight: bold;
+		padding: 0.5rem;
+		text-align: center;
+	}
+
+	&__cell {
+		padding: 0.15rem 0.5rem;
+		border-left: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+
+		&:nth-child(2n) {
+			border-right: 1px solid $border-color;
+		}
+	}
+}
+
+.info {
+	font-weight: bold;
+	text-align: center;
+
+	&_warning { color: red; }
+}
